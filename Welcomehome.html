@@ -5,42 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homes for Rent</title>
     <style>
+        /* General Styling */
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
             margin: 0;
-            padding: 0px;
+            padding: 0;
             display: flex;
             flex-direction: column;
-            height: auto; /* Full height of the viewport */
-            overflow: scroll; /* Prevent scrolling */
-            
-            
+            align-items: center; /* Center the content horizontally */
+            justify-content: flex-start; /* Align content at the top */
+            height: auto;
+            box-sizing: border-box;
         }
 
-
         .wrapper {
-            width: 1080px; /* Set the width to fit within 1080p resolution */
-            max-width: 100%; /* Ensure it is responsive on smaller screens */
-            background-color: rgb(239, 245, 250); /* Optional: Add a background color for the content */
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-            padding: 0px; /* Add padding for spacing */
-            box-sizing: border-box; /* Include padding in the width */
-            overflow: auto; /* Allow scrolling within the wrapper if content overflows */
-            align-self: center; /* Center the wrapper horizontally */
-            margin-top: 0%;
-   }
-        .header {
-          /*  background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            text-align: left;
-            font-size: 14px; 
+            width: 100%; /* Use full width for mobile devices */
+            max-width: 1080px; /* Limit the width for larger screens */
+            background-color: rgb(239, 245, 250);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 10px; /* Add padding for spacing */
             box-sizing: border-box;
-            */
+        }
 
+        .header {
             background-image: url('../seetaram-homes/Header_Home_pic1.png'); /* Replace with your image path */
-           /* background-image: url('Header_Home_pic1.png');*/ /* Replace with your image path */
             background-size: cover; /* Ensure the image covers the entire header */
             background-position: center; /* Center the image */
             color: white;
@@ -53,76 +42,71 @@
             justify-content: left;
             align-items: center;
             height: 100px;
-            
-                }
+        }
 
-                .footer {
-                    background-image: url('Footer_Pic.png'); /* Replace with your image path */
-                    background-size: cover; /* Ensure the image covers the entire header */
-                    /*background-color: #aae2f3; /* Match the header color */
-                    color: rgb(250, 250, 250);
-                    
-                    text-align: center;
-                    padding: 8px 8px;
-                    font-size: 13px;
-                    position:relative;  /* Ensure it stays at the bottom */
-                    width: 100%;
-                    display: flex;
-                    box-sizing: border-box;
-                    flex-direction: column;
-                    align-items: left;
-                    justify-content: center;
-}
+        .footer {
+            background-image: url('Footer_Pic.png'); /* Replace with your image path */
+            background-size: cover; /* Ensure the image covers the entire header */
+            color: rgb(250, 250, 250);
+            text-align: center;
+            padding: 8px 8px;
+            font-size: 13px;
+            position: relative; /* Ensure it stays at the bottom */
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+        }
 
-.footer a {
-    color: rgb(250, 250, 250);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-}
+        .footer a {
+            color: rgb(250, 250, 250);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
 
-.footer a:hover {
-    text-decoration: underline;
-}
+        .footer a:hover {
+            text-decoration: underline;
+        }
 
+        .UnitFeature {
+            font-size: 14px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: normal;
+            color: rgb(43, 33, 36);
+        }
 
-                .UnitFeature {
-                    font-size: 14px;
-                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-weight: normal;
-                    color: rgb(43, 33, 36);
-                }
         .container {
-            
             display: flex; /* Use flexbox to align table and images side by side */
             flex-direction: row; /* Align items horizontally */
             justify-content: space-between; /* Add space between table and images */
             align-items: flex-start; /* Align items at the top */
-           /* gap: 20px; /* Add spacing between table and images */
             padding: 8px;
             box-sizing: border-box;
             height: auto; /* Full height of the viewport */
-            overflow: scroll; /* Prevent scrolling */
+            overflow: hidden; /* Prevent scrolling */
         }
+
         .table-container {
-            flex: 2; /* Allocate more space for the table */
-            overflow: scroll; /* Prevent table overflow */
-            margin:0;            
+            width: 100%; /* Ensure the table takes the full width */
+            overflow-x: auto; /* Allow horizontal scrolling for tables on small screens */
         }
+
         .image-container {
-            /*background-image: url('./Renter_WebSite/Full_Back_01.jpg');*/
             flex: 1; /* Allocate less space for the images */
             display: flex;
             flex-direction: column; /* Stack images vertically */
             align-items: center;
             justify-content: flex-start; /* Center images horizontally */
             gap: 5px; /* Add spacing between images */
-            /*width: 100%;*/
             margin: 0;
-            padding: 0; 
+            padding: 0;
             height: auto;
             overflow: hidden;
         }
+
         .contact-us {
             flex: 1; /* Allocate less space for the images */
             display: flex;
@@ -130,6 +114,7 @@
             align-items: center; /* Center images horizontally */
             gap: 10px; /* Add spacing between images */
         }
+
         .image-container img {
             max-width: 90%; /* Ensure images fit within the container */
             height: auto;
@@ -137,357 +122,305 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             margin-bottom: 1px;
         }
+
         .image-container img:nth-child(2) {
-            display: flex;            
-            max-height:200px;  /* Set a specific height for the second image */
-            object-fit:contain; /* Ensure the image fits within the specified height */
-}
-        table {
-            width: 100%; /* Adjust table to take full width of its container */
-            border-collapse: collapse;
-            font-size: 11px; /* Reduce font size */
+            display: flex;
+            max-height: 200px; /* Set a specific height for the second image */
+            object-fit: contain; /* Ensure the image fits within the specified height */
         }
+
+        table {
+            width: 100%; /* Make the table responsive */
+            border-collapse: collapse;
+            font-size: 12px; /* Adjust font size for readability */
+        }
+
         table, th, td {
             border: 1px solid #ddd;
         }
+
         th, td {
-            padding: 5px; /* Reduce padding */
+            padding: 8px; /* Adjust padding for smaller screens */
             text-align: left;
             vertical-align: top;
         }
+
         th {
             background-color: #1387f3;
             color: white;
         }
-        /* Media Queries for Mobile Devices */
-@media (max-width: 100%) {
-    .header {
-        font-size: 12px; /* Adjust font size for smaller screens */
-        height: auto; /* Allow the header height to adjust */
-        padding: 10px;
-    }
 
-    .table-container table {
-        font-size: 10px; /* Reduce table font size for smaller screens */
-    }
+        /* Responsive Table for Mobile Devices */
+        @media (max-width: 768px) {
+            .table-container {
+                overflow-x: auto; /* Enable horizontal scrolling for tables */
+            }
 
-    .image-container img {
-        max-width: 45%; /* Display smaller images side by side */
-    }
+            table {
+                font-size: 10px; /* Reduce font size for smaller screens */
+            }
 
-    .footer {
-        font-size: 12px; /* Adjust footer font size */
-        padding: 8px;
-    }
-}
+            th, td {
+                padding: 5px; /* Reduce padding for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
-    <div class="header">
-      <!--  <table>   
-            <tr><td><h1>SEETARAM HOMES FOR RENT - SHIVAMOGGA</h1><h1>Find your dream home today!</h1></td><td>Center Align</td><td>
-                <p>For more information, please contact us at <b>+91 95-9105-6240</b> or email us at <a href="mailto:basavaraj.naik@gmail.com">basavaraj.naik@gmail.com</a></p></td></tr>
-        </table>
-    -->
-        
-    </div>
-    <div class="container">
-        <div class="table-container">
-           
-            <table>
-                <thead>
-                    <tr>
-                        <th>Ground Floor</th>
-                        <th>Rent</th>
-                        <th>Deposit</th>
-                        <th>Area</th>
-                        <th>Bed Rooms</th>
-                        <th>Bath Rooms</th>
-                        <th>Available From</th>
-                        <th>Agreement Term</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Building 1: 01</td>
-                        <td>Rs 10,500/ month</td>
-                        <td>Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td><b>Not Available</b></td>
-                        <td>12 Months</td>
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Rs 10,500/ month</td>
-                        <td>Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Rs 10,500/ month</td>
-                        <td>Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                    </tr>
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-           
-            <table>
-                <thead>
-                    <tr>
-                        <th>First Floor</th>
-                        <th>Rent</th>
-                        <th>Area</th>
-                        <th>Bed Rooms</th>
-                        <th>Bath Rooms</th>
-                        <th>Available From</th>
-                        <th>Agreement Term</th>                                                         
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Building 1: 01</td>
-                        <td>Rs 9,500/month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>Not Available</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>Building 1: 02</td>
-                        <td>Rs 9,500/month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Rs 10,000/ month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Rs 10,000/ month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Rs 10,000/ month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-           
-            <table>
-                <thead>
-                    <tr>
-                        <th>Second Floor</th>
-                        <th>Rent</th>
-                        <th>Area</th>
-                        <th>Bed Rooms</th>
-                        <th>Bath Rooms</th>
-                        <th>Available From</th>
-                        <th>Agreement Term</th>                                                         
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Building 1: 01</td>
-                        <td>Rs 10,000/month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>Not Available</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>Building 1: 02</td>
-                        <td>Rs 10,000/month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>Not Available</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Rs 9,000/ month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Rs 9,000/ month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Rs 9,000/ month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-                       <table>
-                <thead>
-                    <tr>
-                        <th>Third Floor</th>
-                        <th>Rent</th>
-                        <th>Area</th>
-                        <th>Bed Rooms</th>
-                        <th>Bath Rooms</th>
-                        <th>Available From</th>
-                        <th>Agreement Term</th>                                                         
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Building 01: 01</td>
-                        <td>Rs 5,000/ month Rs 75,000 Deposit</td>
-                        <td>800 sqft</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td><b>Not Available</b></td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Rs 8,000/ month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Rs 8,000/ month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Rs 8,000/ month Rs 75,000 Deposit</td>
-                        <td>1,200 sqft</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td>April 01 2025</td>
-                        <td>12 Months</td>
-                                          
-                    </tr>
-                    <!-- Add more rows as needed -->
-                </tbody>
-</table><table>
-                <tbody>
-                    <tr>
-                        <td class="UnitFeature"><h3>Home Features:</h3>
-                            <ul>
-                                <li>New Constructed Building, All amenities/Kitches are new.</li>
-                            <li>Full Granite Floor, Spacious living room, Large bedrooms.</li>
-                            <li>Granite Kitchen Countertops.</li>
-                            <li>4 Wheeler/2 Wheeler parking Inside Building at ground floor.</li>
-                            <li>Seperate meter for Water & Eelectric Bills for each home, 24/7 Water Supply.</li>
-                            <li>Very close to Pre Schools, Akshara school, JNNCE Engineering College, Bus Stop, shopping, and dining.</li>
-                        </ul></td>
-                        <td>
-                            
-                            <h3>Location : Navule (Near JNNCE Engineering College), Shivamogga, Karnataka 577216, India</h3>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29085.43622924911!2d75.55858284406672!3d13.949781652191156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbbaf459f59a04f%3A0x44e326f19402749c!2sSeetha%20rama%20nilaya!5e0!3m2!1sen!2sus!4v1742884744649!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </td>
-                                
-                    </tr>
-                  
-                   
-                    <!-- Add more rows as needed -->
-                </tbody>
-                
-            </table>
-            <!-- <h4>Unit Features:</h4>
+        <div class="header">
+        </div>
+        <div class="container">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ground Floor</th>
+                            <th>Rent</th>
+                            <th>Deposit</th>
+                            <th>Area</th>
+                            <th>Bed Rooms</th>
+                            <th>Bath Rooms</th>
+                            <th>Available From</th>
+                            <th>Agreement Term</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Building 1: 01</td>
+                            <td>Rs 10,500/ month</td>
+                            <td>Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td><b>Not Available</b></td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Rs 10,500/ month</td>
+                            <td>Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Rs 10,500/ month</td>
+                            <td>Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Floor</th>
+                            <th>Rent</th>
+                            <th>Area</th>
+                            <th>Bed Rooms</th>
+                            <th>Bath Rooms</th>
+                            <th>Available From</th>
+                            <th>Agreement Term</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Building 1: 01</td>
+                            <td>Rs 9,500/month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>Not Available</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>Building 1: 02</td>
+                            <td>Rs 9,500/month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Rs 10,000/ month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Rs 10,000/ month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Rs 10,000/ month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Second Floor</th>
+                            <th>Rent</th>
+                            <th>Area</th>
+                            <th>Bed Rooms</th>
+                            <th>Bath Rooms</th>
+                            <th>Available From</th>
+                            <th>Agreement Term</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Building 1: 01</td>
+                            <td>Rs 10,000/month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>Not Available</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>Building 1: 02</td>
+                            <td>Rs 10,000/month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>Not Available</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Rs 9,000/ month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Rs 9,000/ month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Rs 9,000/ month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Third Floor</th>
+                            <th>Rent</th>
+                            <th>Area</th>
+                            <th>Bed Rooms</th>
+                            <th>Bath Rooms</th>
+                            <th>Available From</th>
+                            <th>Agreement Term</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Building 01: 01</td>
+                            <td>Rs 5,000/ month Rs 75,000 Deposit</td>
+                            <td>800 sqft</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td><b>Not Available</b></td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Rs 8,000/ month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Rs 8,000/ month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Rs 8,000/ month Rs 75,000 Deposit</td>
+                            <td>1,200 sqft</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>April 01 2025</td>
+                            <td>12 Months</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="UnitFeature"><h3>Home Features:</h3>
+                                <ul>
+                                    <li>New Constructed Building, All amenities/Kitches are new.</li>
+                                    <li>Full Granite Floor, Spacious living room, Large bedrooms.</li>
+                                    <li>Granite Kitchen Countertops.</li>
+                                    <li>4 Wheeler/2 Wheeler parking Inside Building at ground floor.</li>
+                                    <li>Seperate meter for Water & Eelectric Bills for each home, 24/7 Water Supply.</li>
+                                    <li>Very close to Pre Schools, Akshara school, JNNCE Engineering College, Bus Stop, shopping, and dining.</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <h3>Location : Navule (Near JNNCE Engineering College), Shivamogga, Karnataka 577216, India</h3>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29085.43622924911!2d75.55858284406672!3d13.949781652191156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbbaf459f59a04f%3A0x44e326f19402749c!2sSeetha%20rama%20nilaya!5e0!3m2!1sen!2sus!4v1742884744649!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="image-container">
+                <img src="./Home_Pic_2.jpg" alt="Apartment 2">
+                <img src="./Home_Pic_1.jpg" alt="Apartment 1">
+            </div>
+        </div>
+        <footer class="footer">
             <div>
-                <ul>
-                    <li>Full Granite Floor, Spacious living room, Large bedrooms</li>
-                    <li>Granite Kitchen Countertops</li>
-                    <li>4 Wheeler/2 Wheeler parking Inside Building at ground</li>
-                    <li>Seperate meter for Water & Eelectric Bills for each home, 24/7 Water Supply</li>
-                    <li>Very close to schools/JNNCE Engineering College, Bus Stop, shopping, and dining</li>
-                </ul>
-                </div>             
-            --> 
-        </div>
-                
-        <div class="image-container">
-            
-            <img src="./Home_Pic_2.jpg" alt="Apartment 2">
-            <img src="./Home_Pic_1.jpg" alt="Apartment 1">
-            <!-- Add more images as needed -->
-        </div>
+                <p>&copy; 2025 SEETARAM HOMES FOR RENT - SHIVAMOGGA. All rights reserved.</p>
+                <p>Contact us: <a href="mailto:bullet08151947@gmail.com">basavaraj.naik@gmail.com</a> | Phone: +91 95-9105-6240</p>
+            </div>
+        </footer>
     </div>
-    <footer class="footer">
-        <div>
-            <p>&copy; 2025 SEETARAM HOMES FOR RENT - SHIVAMOGGA. All rights reserved.</p>
-            <p>Contact us: <a href="mailto:bullet08151947@gmail.com">basavaraj.naik@gmail.com</a> | Phone: +91 95-9105-6240</p>
-           <!-- <p>Follow us on: 
-                <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
-                <a href="https://www.twitter.com" target="_blank">Twitter</a> | 
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-            </p>-->
-        </div>
-    </footer>
-    </div>
-
 </body>
 </html>
