@@ -102,7 +102,7 @@
             padding: 8px;
             box-sizing: border-box;
             height: auto; /* Full height of the viewport */
-            overflow: hidden; /* Prevent scrolling */
+            overflow: scroll; /* Prevent scrolling */
         }
         .table-container {
             flex: 2; /* Allocate more space for the table */
@@ -159,6 +159,27 @@
             background-color: #1387f3;
             color: white;
         }
+        /* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .header {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        height: auto; /* Allow the header height to adjust */
+        padding: 10px;
+    }
+
+    .table-container table {
+        font-size: 10px; /* Reduce table font size for smaller screens */
+    }
+
+    .image-container img {
+        max-width: 45%; /* Display smaller images side by side */
+    }
+
+    .footer {
+        font-size: 12px; /* Adjust footer font size */
+        padding: 8px;
+    }
+}
     </style>
 </head>
 <body>
