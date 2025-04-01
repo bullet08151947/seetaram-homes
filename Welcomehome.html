@@ -14,7 +14,20 @@
             flex-direction: column;
             height: auto; /* Full height of the viewport */
             overflow: hidden; /* Prevent scrolling */
+            
         }
+
+
+        .wrapper {
+            width: 1080px; /* Set the width to fit within 1080p resolution */
+            max-width: 100%; /* Ensure it is responsive on smaller screens */
+            background-color: white; /* Optional: Add a background color for the content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+            padding: 20px; /* Add padding for spacing */
+            box-sizing: border-box; /* Include padding in the width */
+            overflow: auto; /* Allow scrolling within the wrapper if content overflows */
+            align-self: center; /* Center the wrapper horizontally */
+   }
         .header {
           /*  background-color: #4CAF50;
             color: white;
@@ -63,7 +76,10 @@
 
 
                 .UnitFeature {
-                    font-size: 18px;
+                    font-size: 15px;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-weight: normal;
+                    color: rgb(43, 33, 36);
                 }
         .container {
             
@@ -71,8 +87,8 @@
             flex-direction: row; /* Align items horizontally */
             justify-content: space-between; /* Add space between table and images */
             align-items: flex-start; /* Align items at the top */
-            gap: 20px; /* Add spacing between table and images */
-            padding: 10px;
+           /* gap: 20px; /* Add spacing between table and images */
+            padding: 0;
             box-sizing: border-box;
             height: auto; /* Full height of the viewport */
             overflow: hidden; /* Prevent scrolling */
@@ -80,15 +96,21 @@
         .table-container {
             flex: 2; /* Allocate more space for the table */
             overflow: hidden; /* Prevent table overflow */
+            margin:0;
         }
         .image-container {
-            background-image: url('./Renter_WebSite/Full_Back_01.jpg');
+            /*background-image: url('./Renter_WebSite/Full_Back_01.jpg');*/
             flex: 1; /* Allocate less space for the images */
             display: flex;
             flex-direction: column; /* Stack images vertically */
-            align-items: center; /* Center images horizontally */
-            gap: 10px; /* Add spacing between images */
-            
+            align-items: center;
+            justify-content: flex-start; /* Center images horizontally */
+            gap: 5px; /* Add spacing between images */
+            /*width: 100%;*/
+            margin: 0;
+            padding: 0; 
+            height: auto;
+            overflow: hidden;
         }
         .contact-us {
             flex: 1; /* Allocate less space for the images */
@@ -98,15 +120,21 @@
             gap: 10px; /* Add spacing between images */
         }
         .image-container img {
-            max-width: 65%; /* Ensure images fit within the container */
-            height: 65%;
+            max-width: 90%; /* Ensure images fit within the container */
+            height: auto;
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1px;
         }
+        .image-container img:nth-child(2) {
+            display: flex;            
+            max-height:200px;  /* Set a specific height for the second image */
+            object-fit:contain; /* Ensure the image fits within the specified height */
+}
         table {
             width: 100%; /* Adjust table to take full width of its container */
             border-collapse: collapse;
-            font-size: 12px; /* Reduce font size */
+            font-size: 11px; /* Reduce font size */
         }
         table, th, td {
             border: 1px solid #ddd;
@@ -123,6 +151,7 @@
     </style>
 </head>
 <body>
+    <div class="wrapper">
     <div class="header">
       <!--  <table>   
             <tr><td><h1>SEETARAM HOMES FOR RENT - SHIVAMOGGA</h1><h1>Find your dream home today!</h1></td><td>Center Align</td><td>
@@ -385,7 +414,7 @@
                         <td>
                             
                             <h3>Location : Navule (Near JNNCE Engineering College), Shivamogga, Karnataka 577216, India</h3>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29085.43622924911!2d75.55858284406672!3d13.949781652191156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbbaf459f59a04f%3A0x44e326f19402749c!2sSeetha%20rama%20nilaya!5e0!3m2!1sen!2sus!4v1742884744649!5m2!1sen!2sus" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29085.43622924911!2d75.55858284406672!3d13.949781652191156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbbaf459f59a04f%3A0x44e326f19402749c!2sSeetha%20rama%20nilaya!5e0!3m2!1sen!2sus!4v1742884744649!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </td>
                                 
                     </tr>
@@ -409,8 +438,9 @@
         </div>
                 
         <div class="image-container">
-            <img src="./Home_Pic_1.jpg" alt="Apartment 1">
+            
             <img src="./Home_Pic_2.jpg" alt="Apartment 2">
+            <img src="./Home_Pic_1.jpg" alt="Apartment 1">
             <!-- Add more images as needed -->
         </div>
     </div>
@@ -425,5 +455,7 @@
             </p>-->
         </div>
     </footer>
+    </div>
+
 </body>
 </html>
