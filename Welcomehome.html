@@ -9,11 +9,12 @@
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
             margin: 0;
-            padding: 0;
+            padding: 0px;
             display: flex;
             flex-direction: column;
             height: auto; /* Full height of the viewport */
             overflow: hidden; /* Prevent scrolling */
+            
             
         }
 
@@ -21,12 +22,13 @@
         .wrapper {
             width: 1080px; /* Set the width to fit within 1080p resolution */
             max-width: 100%; /* Ensure it is responsive on smaller screens */
-            background-color: white; /* Optional: Add a background color for the content */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-            padding: 20px; /* Add padding for spacing */
+            background-color: rgb(239, 245, 250); /* Optional: Add a background color for the content */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+            padding: 0px; /* Add padding for spacing */
             box-sizing: border-box; /* Include padding in the width */
             overflow: auto; /* Allow scrolling within the wrapper if content overflows */
             align-self: center; /* Center the wrapper horizontally */
+            margin-top: 0%;
    }
         .header {
           /*  background-color: #4CAF50;
@@ -38,10 +40,11 @@
             */
 
             background-image: url('../seetaram-homes/Header_Home_pic1.png'); /* Replace with your image path */
+           /* background-image: url('Header_Home_pic1.png'); /* Replace with your image path */
             background-size: cover; /* Ensure the image covers the entire header */
             background-position: center; /* Center the image */
             color: white;
-            padding: 20px;
+            margin-top: 0%;
             text-align: center;
             font-size: 14px;
             box-sizing: border-box;
@@ -49,25 +52,33 @@
             flex-direction: column;
             justify-content: left;
             align-items: center;
-            height: 75px;
+            height: 100px;
+            
                 }
 
                 .footer {
-    background-color: #4CAF50; /* Match the header color */
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 14px;
-    position: relative; /* Ensure it stays at the bottom */
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
+                    background-image: url('../seetaram-homes/footer_pic.png'); /* Replace with your image path */
+                    background-size: cover; /* Ensure the image covers the entire header */
+                    /*background-color: #aae2f3; /* Match the header color */
+                    color: rgb(250, 250, 250);
+                    
+                    text-align: center;
+                    padding: 8px 8px;
+                    font-size: 13px;
+                    position:relative;  /* Ensure it stays at the bottom */
+                    width: 100%;
+                    display: flex;
+                    box-sizing: border-box;
+                    flex-direction: column;
+                    align-items: left;
+                    justify-content: center;
 }
 
 .footer a {
-    color: white;
+    color: rgb(250, 250, 250);
     text-decoration: none;
     font-weight: bold;
+    font-size: 15px;
 }
 
 .footer a:hover {
@@ -76,7 +87,7 @@
 
 
                 .UnitFeature {
-                    font-size: 15px;
+                    font-size: 14px;
                     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                     font-weight: normal;
                     color: rgb(43, 33, 36);
@@ -88,7 +99,7 @@
             justify-content: space-between; /* Add space between table and images */
             align-items: flex-start; /* Align items at the top */
            /* gap: 20px; /* Add spacing between table and images */
-            padding: 0;
+            padding: 8px;
             box-sizing: border-box;
             height: auto; /* Full height of the viewport */
             overflow: hidden; /* Prevent scrolling */
@@ -145,7 +156,7 @@
             vertical-align: top;
         }
         th {
-            background-color: #4CAF50;
+            background-color: #1387f3;
             color: white;
         }
     </style>
@@ -402,7 +413,7 @@
 </table><table>
                 <tbody>
                     <tr>
-                        <td class="UnitFeature"><h3>Unit Features:</h3>
+                        <td class="UnitFeature"><h3>Home Features:</h3>
                             <ul>
                                 <li>New Constructed Building, All amenities/Kitches are new.</li>
                             <li>Full Granite Floor, Spacious living room, Large bedrooms.</li>
