@@ -455,7 +455,7 @@
         </DIV>
         <div class="UnitFeature">Home Features:
                 <ul>
-                    <li>New Constructed Building, All amenities/Kitches are new.</li>
+                    <li>New Constructed Building, All amenities/Kitchens are new.</li>
                     <li>Full Granite Floor, Spacious living room, Large bedrooms.</li>
                     <li>Granite Kitchen Countertops.</li>
                     <li>4 Wheeler/2 Wheeler parking Inside Building at ground floor.</li>
@@ -481,6 +481,27 @@
                 const content = header.nextElementSibling;
                 content.style.display = content.style.display === 'block' ? 'none' : 'block';
             });
+        });
+
+        // Disable right-click
+        document.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+        });
+
+        // Disable specific keyboard shortcuts
+        document.addEventListener('keydown', (event) => {
+            // Disable Ctrl+U (View Source)
+            if (event.ctrlKey && event.key === 'u') {
+                event.preventDefault();
+            }
+            // Disable Ctrl+Shift+I (Developer Tools)
+            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+                event.preventDefault();
+            }
+            // Disable F12 (Developer Tools)
+            if (event.key === 'F12') {
+                event.preventDefault();
+            }
         });
     </script>
 </body>
