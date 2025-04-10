@@ -362,14 +362,53 @@
             
             <!-- Updated Login Section -->
             <div class="container">
-                Main Content
+                <div class="login-container">
+                    
+                    <form id="loginForm" action="Welcomehome.html" method="POST">
+                        <h3>Login</h3>
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="button-group">
+                            <button type="submit" class="submit-btn">Login</button>
+                            <button type="button" class="cancel-btn" onclick="resetForm()">Cancel</button>
+                        </div>
+                        <div class="forgot-password">
+                            <a href="javascript:void(0)" onclick="toggleForgotPassword()">Forgot Password?</a>
+                        </div>
+                    </form>
+
+                    <!-- Forgot Password Section -->
+                    <div id="forgotPasswordSection" style="display: none; margin-top: 20px;">
+                        <h4>Reset Password</h4>
+                        <form id="forgotPasswordForm" action="/reset-password" method="POST">
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="button-group">
+                                <button type="submit" class="submit-btn">Send Reset Link</button>
+                                <button type="button" class="cancel-btn" onclick="toggleForgotPassword()">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
            
         
             <div class="image-container">
                 <div class="menu"> 
                     <p><a href="/seetaram-homes/Welcomehome.html" onclick="logout()">LOGOUT</a></p>
-                </div>               
+                </div>
+                <div class="menu">   
+                    <img src="Home_Pic_1.jpg" alt="Apartment 2" style="height: auto; width: auto">
+                    <!--img src="./Home_Pic_1.jpg" alt="Apartment 1">-->
+                </div>
                                      
             </div>
            
