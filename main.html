@@ -362,42 +362,7 @@
             
             <!-- Updated Login Section -->
             <div class="container">
-                <div class="login-container">
-                    
-                    <form id="loginForm" action="Welcomehome.html" method="POST">
-                        <h3>Login</h3>
-                        <div class="form-group">
-                            <label for="username">Username:</label>
-                            <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                        </div>
-                        <div class="button-group">
-                            <button type="submit" class="submit-btn">Login</button>
-                            <button type="button" class="cancel-btn" onclick="resetForm()">Cancel</button>
-                        </div>
-                        <div class="forgot-password">
-                            <a href="javascript:void(0)" onclick="toggleForgotPassword()">Forgot Password?</a>
-                        </div>
-                    </form>
-
-                    <!-- Forgot Password Section -->
-                    <div id="forgotPasswordSection" style="display: none; margin-top: 20px;">
-                        <h4>Reset Password</h4>
-                        <form id="forgotPasswordForm" action="/reset-password" method="POST">
-                            <div class="form-group">
-                                <label for="email">Email Address:</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                            </div>
-                            <div class="button-group">
-                                <button type="submit" class="submit-btn">Send Reset Link</button>
-                                <button type="button" class="cancel-btn" onclick="toggleForgotPassword()">Cancel</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                Main Content
             </div>
            
         
@@ -422,60 +387,6 @@
             </div>
         </footer>
     </div>
-    <script>
-        document.querySelectorAll('.collapsible').forEach((header) => {
-            header.addEventListener('click', () => {
-                const content = header.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-
-        // Disable right-click
-        document.addEventListener('contextmenu', (event) => {
-            event.preventDefault();
-        });
-
-        // Disable specific keyboard shortcuts
-        document.addEventListener('keydown', (event) => {
-            // Disable Ctrl+U (View Source)
-            if (event.ctrlKey && event.key === 'u') {
-                event.preventDefault();
-            }
-            // Disable Ctrl+Shift+I (Developer Tools)
-            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
-                event.preventDefault();
-            }
-            // Disable F12 (Developer Tools)
-            if (event.key === 'F12') {
-                event.preventDefault();
-            }
-        });
-
-        function logout() {
-            // Clear session storage or perform any necessary cleanup
-            sessionStorage.clear();
-            alert("You have been logged out.");
-            // Redirect to the login page or home page
-            window.location.href = "/Login.html";
-        }
-
-        // Function to reset the login form
-        function resetForm() {
-            document.getElementById('loginForm').reset();
-        }
-
-        // Function to toggle the Forgot Password section
-        function toggleForgotPassword() {
-            const forgotPasswordSection = document.getElementById('forgotPasswordSection');
-            const loginForm = document.getElementById('loginForm');
-            if (forgotPasswordSection.style.display === 'none') {
-                forgotPasswordSection.style.display = 'block';
-                loginForm.style.display = 'none';
-            } else {
-                forgotPasswordSection.style.display = 'none';
-                loginForm.style.display = 'block';
-            }
-        }
-    </script>
+    
 </body>
 </html>
